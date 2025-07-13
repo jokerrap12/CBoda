@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bodda | Personal Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #00ff88;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-switcher button {
+      margin: 0 5px;
+      padding: 6px 14px;
+      background-color: #1f1f1f;
+      color: #00ff88;
+      border: 2px solid #00ff88;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .language-switcher button:hover {
+      background-color: #00ff88;
+      color: #000;
+    }
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section h2 {
+      border-left: 5px solid #00ff88;
+      padding-left: 10px;
+      color: #00ff88;
+    }
+    .section p {
+      line-height: 1.8;
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-container img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #222;
+      box-shadow: 0 0 10px rgba(0,255,136,0.2);
+    }
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .social-buttons a {
+      text-decoration: none;
+      background-color: #1f1f1f;
+      border: 2px solid #00ff88;
+      color: #00ff88;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    .social-buttons a:hover {
+      background-color: #00ff88;
+      color: #000;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => setLang('ar');
+  </script>
+</head>
+<body>
+  <div class="language-switcher">
+    <button onclick="setLang('ar')">عربي</button>
+    <button onclick="setLang('en')">English</button>
+  </div>  <header>
+    <h1>Bodda</h1>
+    <p data-lang="ar">مبرمج محترف ومتداول فني | أرباح حقيقية من السوق 📈</p>
+    <p data-lang="en" style="display:none">Professional Developer & Trader | Real Profits from the Market 📈</p>
+  </header>  <section class="section about">
+    <h2 data-lang="ar">من أنا</h2>
+    <h2 data-lang="en" style="display:none">About Me</h2>
+    <p data-lang="ar">
+      مبرمج Full-Stack ومتداول محترف. أتقن Python, Bash, HTML, CSS, JavaScript، وأطور أدوات تداول تربط بين البرمجة ومنصات مثل MetaTrader 5 و TradingView. حاصل على شهادة CEH بخبرة في تحليل الأسواق وبناء أنظمة مؤتمتة.
+    </p>
+    <p data-lang="en" style="display:none">
+      Full-Stack developer and professional trader, skilled in Python, Bash, HTML, CSS, and JavaScript. I build smart tools and automations that connect directly to platforms like MetaTrader 5 and TradingView. CEH certified, with deep experience in market analysis and building secure systems.
+    </p>
+  </section>  <section class="section gallery">
+    <h2 data-lang="ar">أعمالي وأرباحي</h2>
+    <h2 data-lang="en" style="display:none">My Work & Profits</h2>
+    <div class="gallery-container">
+      <!-- ضع صور الأرباح هنا -->
+      <img src="path/to/your/image1.jpg" alt="صورة ربح 1">
+      <img src="path/to/your/image2.jpg" alt="صورة ربح 2">
+    </div>
+  </section>  <section class="section social">
+    <h2 data-lang="ar">تابعني على</h2>
+    <h2 data-lang="en" style="display:none">Follow Me</h2>
+    <div class="social-buttons">
+      <a href="#">فيسبوك / Facebook</a>
+      <a href="#">إنستجرام / Instagram</a>
+      <a href="#">تليجرام / Telegram</a>
+      <a href="#">لينكدإن / LinkedIn</a>
+      <a href="#">تويتر / Twitter</a>
+    </div>
+  </section>  <footer>
+    &copy; 2025 Bodda. All rights reserved.
+  </footer>
+</body>
+</html>
